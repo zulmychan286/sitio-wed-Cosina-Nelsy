@@ -1,0 +1,114 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff5f0;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.form-card {
+  background: #fff;
+  padding: 25px 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 420px;
+  box-sizing: border-box;
+}
+
+h2 {
+  color: #e40a52;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+  color: #444;
+  font-size: 14px;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 15px;
+  box-sizing: border-box;
+  background-color: #fffdfb;
+}
+
+textarea {
+  resize: none;
+}
+
+.cuenta-box,
+.efectivo-box {
+  background: #fff3f3;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 15px;
+  border: 1px solid #f4c7c7;
+  text-align: center;
+}
+
+.cuenta-numero {
+  font-size: 18px;
+  font-weight: bold;
+  color: #e40a52;
+  letter-spacing: 1px;
+}
+
+.preview img {
+  margin-top: 10px;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+button {
+  margin-top: 20px;
+  width: 100%;
+  background: #25d366;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #1ebe5d;
+}
+
+input[type="file"] {
+  border: none;
+  background: transparent;
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo img {
+  width: 100px;
+}
+
+.oculto {
+  display: none;
+}
+
+

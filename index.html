@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulario de Pedido</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fdfdfd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .form-container {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 600px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-container h2 {
+      text-align: center;
+      color: #e60b66;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group label {
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    .form-group input[type="file"] {
+      padding: 5px;
+    }
+
+    #enviarBtn {
+      background-color: #e60b66;
+      color: white;
+      padding: 12px;
+      border: none;
+      width: 100%;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    #enviarBtn:hover {
+      background-color: #e60b66;
+    }
+
+    @media (max-width: 480px) {
+      .form-container {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Formulario de Pedido</h2>
+
+    <div class="form-group">
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" placeholder="Nombre" required />
+    </div>
+
+    <div class="form-group">
+      <label for="apellido">Apellido</label>
+      <input type="text" id="apellido" placeholder="Apellido" required />
+    </div>
+
+    <div class="form-group">
+      <label for="direccion">Dirección</label>
+      <input type="text" id="direccion" placeholder="Ej: Calle 10 #23 entre 21 y 25" required />
+    </div>
+
+    <div class="form-group">
+      <label for="referencia">Referencia</label>
+      <textarea id="referencia" rows="2" placeholder="Ej: Frente al OXXO" required></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="metodo-pago">Método de pago</label>
+      <select id="metodo-pago" required>
+        <option value="">Selecciona una opción</option>
+        <option value="efectivo">Efectivo</option>
+        <option value="transferencia">Transferencia</option>
+        <option value="tarjeta">Tarjeta</option>
+      </select>
+    </div>
+
+    <div class="form-group" id="campo-efectivo" style="display: none;">
+      <label for="cantidad-pago">¿Con cuánto va a pagar?</label>
+      <input type="number" id="cantidad-pago" placeholder="Ej: 200" min="0" />
+    </div>
+
+    <div class="form-group">
+      <label for="comprobante">Comprobante de depósito</label>
+      <input type="file" id="comprobante" />
+    </div>
+
+    <button id="enviarBtn">Enviar por WhatsApp</button>
+  </div>
+
+  <script>
+    const metodoPago = document.getElementById("metodo-pago");
+    const campoEfectivo = document.getElementById("campo-efectivo");
+
+    metodoPago.addEventListener("change", () => {
+      if (metodoPago.value === "efectivo") {
+        campoEfectivo.style.display = "block";
+      } else {
+        campoEfectivo.style.display = "none";
+      }
+    });
+
+    // Puedes agregar tu función de envío por WhatsApp aquí
+  </script>
+</body>
+</html>
+
+
+
+
